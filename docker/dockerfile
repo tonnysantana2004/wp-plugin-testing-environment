@@ -9,6 +9,11 @@ FROM wordpress:php8.2-fpm-alpine
 # Installing dependencies
 RUN apk add --no-cache subversion mysql-client
 
+# Installing WP CLI
+RUN wget -O wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
+    chmod +x wp && \ 
+    mv wp /usr/local/bin/wp
+
 # Installing phpunit
 RUN wget -O phpunit https://phar.phpunit.de/phpunit-11.phar&& \
     chmod +x phpunit && \
