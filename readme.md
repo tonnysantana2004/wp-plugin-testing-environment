@@ -1,3 +1,3 @@
-# Plugin Test Environment with Docker & PHPUnit
+# Plugin Testing Environment with Docker & PHPUnit
 
-A complete environment for creating and develop wordpress plugin.
+A complete environment for wordpress plugins development.
