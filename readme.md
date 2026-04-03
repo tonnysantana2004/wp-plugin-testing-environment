@@ -57,6 +57,14 @@ cd wp-content/plugins/my-plugin#
   },
 ```
 
+#### And no the scripts section:
+```
+"scripts": {
+    "makepot": "wp i18n make-pot .",
+    "phpunit" :"docker exec -w /var/www/html/wp-content/plugins/my-plugin wordpress phpunit"
+  },
+```
+
 #### Install the plugin core dependencies
 ```
 composer install -W
