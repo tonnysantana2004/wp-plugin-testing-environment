@@ -22,9 +22,7 @@ services:
     
   wordpress:
     container_name: wordpress
-    build:
-      context: .
-      dockerfile: dockerfile
+    build: .
     volumes:
       - ./.wp_container_volume:/var/www/html
       - ../.:/var/www/html/wp-content/plugins/${PLUGIN_SLUG}
