@@ -21,8 +21,6 @@ services:
     container_name: wordpress
     build: .
     command: sh /entrypoint.sh
-    tty: true
-    stdin_open: true
     volumes:
     
       # Entrypoint
