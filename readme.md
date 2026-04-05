@@ -41,6 +41,16 @@ Follow the cli instructions to ensure that everything was installed correctly.
 
 #### Use the following commands to test your code:
 ```
-vendor/bin/phpcs
-vendor/bin/phpunit
+docker exec -w /var/www/html/wp-content/plugins/the-perfect-gallery wordpress vendor/bin/phpunit
+docker exec -w /var/www/html/wp-content/plugins/the-perfect-gallery wordpress vendor/bin/phpcs
+```
+#### You can add an alias on the composer.json for those commands
+
+```
+"scripts" : {
+    "phpunit" : "docker exec -w /var/www/html/wp-content/plugins/the-perfect-gallery wordpress vendor/bin/phpunit",
+    "phpcs" : "docker exec -w /var/www/html/wp-content/plugins/the-perfect-gallery wordpress vendor/bin/phpcs"
+}
+
+> composer phpunit
 ```
