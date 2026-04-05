@@ -24,4 +24,4 @@ RUN wget -O phpunit https://phar.phpunit.de/phpunit-9.6.16.phar && \
 COPY install-wp-tests.sh /install-wp-tests.sh
 
 # Generate tests dependencies
-RUN bash /install-wp-tests.sh wordpress wordpress 'wordpress' mysql latest false
+RUN bash /install-wp-tests.sh wordpress wordpress 'wordpress' ${WORDPRESS_DATABASE_HOST} latest false
