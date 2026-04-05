@@ -29,13 +29,13 @@ services:
       # Entrypoint
       - ./install-wp-tests.sh:/install-wp-tests.sh
       - ./entrypoint.sh:/entrypoint.sh
-
       # File paths
       - ./.wp_container_volume:/var/www/html
       - ../.:/var/www/html/wp-content/plugins/${PLUGIN_SLUG}
 
     restart: unless-stopped
     environment:
+      - PLUGIN_SLUG=${PLUGIN_SLUG}
       - WORDPRESS_DB_HOST=${WORDPRESS_DB_HOST}
       - WORDPRESS_DB_USER=${WORDPRESS_DB_USER}
       - WORDPRESS_DB_PASSWORD=${WORDPRESS_DB_PASSWORD}
