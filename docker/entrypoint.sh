@@ -48,7 +48,7 @@ echo ---------------------------------
 sleep 2
 
 if ! wp plugin is-installed $PLUGIN_SLUG --allow-root; then
-  wp scaffold plugin $PLUGIN_SLUG --allow-root
+  wp scaffold plugin $PLUGIN_SLUG --allow-root --force
 fi
 cd wp-content/plugins/$PLUGIN_SLUG
 
